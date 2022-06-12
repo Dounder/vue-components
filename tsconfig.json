@@ -1,0 +1,15 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "app/*": ["*"],
+      "modules/*": ["src/modules/*"],
+      "layouts/*": ["src/layouts/*"],
+      "stores/*": ["src/stores/*"],
+      "cards/*": ["modules/cards/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}

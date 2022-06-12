@@ -1,0 +1,47 @@
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	&::-webkit-scrollbar {
+		width: 16px;
+		background: $dark;
+		&-thumb {
+			background: rgba($accent, 0.5);
+			border-radius: 10px;
+			border: 2px solid $dark;
+			&:hover {
+				background: rgba($accent, 0.8);
+			}
+		}
+	}
+}
+
+.q-page {
+	background: $dark;
+	color: $light;
+}
+
+pre code.hljs {
+	display: block !important;
+	overflow-y: auto !important;
+	overflow-x: hidden !important;
+	padding: 1em !important;
+	height: 100% !important;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+		&-thumb {
+			background: rgba($accent, 0.5);
+			border-radius: 10px;
+			border: 2px solid $dark;
+			&:hover {
+				background: rgba($accent, 0.8);
+			}
+		}
+		&-corner {
+			display: none;
+		}
+	}
+}
