@@ -9,7 +9,9 @@ onMounted(() => store.setPageTitle('Dcode - Cards'))
 
 <template>
 	<q-page padding>
-		<ItemSkeleton v-for="item in 10" :key="item" />
+		<ItemSkeleton>
+			<template v-slot:body> </template>
+		</ItemSkeleton>
 	</q-page>
 </template>
 
