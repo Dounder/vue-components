@@ -1,15 +1,15 @@
 <script lang="ts">
 export default { name: 'SkeletonHeader' }
 </script>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps({ title: { type: String, default: 'No title...' } })
+</script>
 
 <template>
 	<q-card-section class="header">
 		<section class="header-title">
 			<p class="header-name">
-				Fugiat aliqua tempor anim tempor est ullamco dolore consequat laboris sint ex magna aliquip aliquip.
-				Veniam id duis consequat et in ex sit occaecat ad culpa voluptate excepteur consequat. Fugiat enim sint
-				aute do aliqua adipisicing reprehenderit laborum incididunt in tempor minim cillum.
+				{{ props.title }}
 			</p>
 		</section>
 		<q-space />

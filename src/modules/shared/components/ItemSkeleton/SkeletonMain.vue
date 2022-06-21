@@ -4,18 +4,19 @@ export default { name: 'SkeletonMain' }
 <script lang="ts" setup>
 import { ref } from 'vue'
 import SkeletonHeader from './SkeletonHeader.vue'
-import SkeletonCode from './SkeletonCode.vue'
+
+const props = defineProps({ title: { type: String, default: 'No title...' } })
 
 const splitterModel = ref(50)
 </script>
 
 <template>
 	<q-card class="skeleton" flat dark>
-		<SkeletonHeader />
+		<SkeletonHeader :title="props.title" />
 		<q-separator spaced inset dark />
 		<q-splitter v-model="splitterModel" :limits="[50, 100]" reverse class="splitter" separator-class="bg-grey">
 			<template v-slot:before>
-				<section class="flex flex-center">
+				<section class="flex flex-center full-height overflow-hidden">
 					<slot name="body" />
 				</section>
 			</template>
@@ -25,7 +26,7 @@ const splitterModel = ref(50)
 			</template>
 
 			<template v-slot:after>
-				<SkeletonCode />
+				<slot name="code" />
 			</template>
 		</q-splitter>
 	</q-card>

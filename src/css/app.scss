@@ -21,14 +21,16 @@ html {
 	color: $light;
 }
 
+.q-splitter__before {
+	overflow: hidden !important;
+}
+
 pre code.hljs {
 	display: block !important;
 	overflow-y: auto !important;
-	overflow-x: hidden !important;
+	overflow-x: auto !important;
 	padding: 1em !important;
 	height: 100% !important;
-	word-wrap: break-word;
-	white-space: pre-wrap;
 	&::-webkit-scrollbar {
 		width: 8px;
 		height: 8px;
